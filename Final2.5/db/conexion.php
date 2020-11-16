@@ -7,7 +7,7 @@
 			#PDO(Servidor;db;usuario;contraseña)
 			$link = new PDO("mysql:host=localhost;dbname=practicas",
 			"root",
-			"Fx32Rt");
+			"root");
 
 			$link->exec("set names uf8");
 

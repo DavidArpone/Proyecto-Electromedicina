@@ -25,6 +25,8 @@ versión de la base de datos 2
 Versión del codigo esp32 1.5
 
 Para compilar debe modificar el codigo .ino y agregar:
+  Nombre de la conexión Wi-Fi
+  Contraseña de la conexión Wi-Fi
   Ip local del servido
   Ip fija al ESP32
   Puerta de Entrada al Router

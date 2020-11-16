@@ -1,0 +1,115 @@
+<!DOCTYPE>
+	<html>
+		<head>      	
+
+			
+      		<title>Home</title>
+			
+      		<meta charset="UTF-8">
+      		
+      		<meta name="viewport" content="width=device-width, initial-scale=1">
+      		
+      		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+			
+      		<link  rel = "icon"  href = "src/home-solid.svg"  type = "image / x-icon" >
+
+
+      		<script src="https://kit.fontawesome.com/b8e60f92a5.js" crossorigin="anonymous"></script>
+    
+    	</head>
+
+		<body class="w3-pale-blue ">
+				<div class="w3-bar w3-blue">
+					
+					<h1 class="w3-bar-item w3-left">Paciente: </h1>
+
+		            <h1 id="saludo" class="w3-bar-item w3-right"></h1>
+		        </div>
+
+
+					<div class="w3-sidebar w3-bar-block w3-pale-blue w3-card" style="width:130px">
+					  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Inicio')">Inicio
+					  <i class="fas fa-home"></i></button>
+					  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Vivo')">Vivo
+					  <i class="fas fa-video"></i>
+					  <i class="fas fa-play-circle"></i></button>
+					  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Notas')">Notas
+					  <i class="fas fa-notes-medical"></i></button>
+					  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Ecg')">Ecg
+					  <i class="fas fa-heartbeat"></i></button>
+					  <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Historial')">Historial
+					  <i class="fas fa-briefcase-medical"></i></button>
+					  <button class="w3-bar-item w3-button tablink" onclick="Close(event)">Salir</button>
+					</div>
+
+					<div style="margin-left:130px">
+					
+						<div id="Inicio" class="w3-container sec " style="display:block;">
+					    	<h2>Bienvenido</h2>
+					    	<p>Usted se encuentra en la página de inicio.</p>
+					    	<p>A la izquierda verá un panel de navegación con el cual podrá acceder a los sitios de nuestra página.</p>
+					    	<p>Vivo: Dentro de esta pestaña usted podrá visualizar los signos vitales de frecuencia cardíaca, temperatura corporal y presión sanguínea.</p>
+					    	<p>Notas: Dentro de esta pestaña usted podrá dejar registrado cualquier tipo de información indispensble a la que podrá acceder en otro momento y desde cuaquier dispositivo.</p>
+					    	<p>Ecg: Dentro de esta pestaña usted podrá visualizar un electrocardiograma del paciente de las últimas 24 Hs.</p>
+					    	<p>Historial: Dentro de esta pestaña usted podrá visualizar un registro de los valores tomados al paciente en un rango de las últimas 24 Hs.</p>
+						</div>
+
+					  	<div id="Vivo" class="w3-container sec " style="display:none">
+					    	<h2>Vivo:</h2>	
+					  	</div>
+
+					  	<div id="Notas" class="w3-container sec " style="display:none">
+					    	<h2>Notas:</h2>
+					  	</div>
+
+					  	<div id="Ecg" class="w3-container sec" style="display:none">
+					    	<h2>Ecg:</h2>
+					  	</div>
+
+					  	<div id="Historial" class="w3-container sec" style="display:none">
+					    	<h2>Historial:</h2>
+					  	</div>
+
+					</div>
+
+			
+					<!-- SALUDO JS-->
+					<script type="text/javascript">
+		              var hoy=new Date();
+		              var hora=hoy.getHours();
+		              var saludo = "";
+		            
+		              if(hora>=4&&hora<12){
+		              saludo="Buenos Días";
+		              }else if(hora>=12&&hora<19){
+		              saludo="Buenas Tardes";
+		              }else if(hora>=19||hora<4){
+		              saludo="Buenas Noches";}
+		              document.getElementById('saludo').innerHTML=saludo;
+		            </script>
+
+
+					<!-- CAMBIO DE PESTAÑA -->
+					<script>
+					function openCity(evt, place) {
+					  var i, x, tablinks;
+					  x = document.getElementsByClassName("sec");
+					  for (i = 0; i < x.length; i++) {
+					    x[i].style.display = "none";
+					  }
+					  tablinks = document.getElementsByClassName("tablink");
+					  for (i = 0; i < x.length; i++) {
+					    tablinks[i].className = tablinks[i].className.replace(" w3-blue", ""); 
+					  }
+					  document.getElementById(place).style.display = "block";
+					  evt.currentTarget.className += " w3-blue";
+					}
+
+
+					function Close(evt){
+						window.location="login.html";
+					}
+					</script>
+
+		</body>
+	</html>

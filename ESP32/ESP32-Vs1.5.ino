@@ -8,13 +8,13 @@ DallasTemperature sensor(&oneWireBus);
 
 int contconexion = 0;
 
-const char *ssid = "DiosEterno"; //ssid de la conexión wifi
-const char *password = "ffdg_1995"; //pw de la conexión wifi
+const char *ssid = ""; //ssid de la conexión wifi
+const char *password = ""; //pw de la conexión wifi
 
 unsigned long previousMillis = 0;
-char host[] = "192.168.1.60"; //Host a conectar
-String strhost = "192.168.1.60"; //Host a enviar http Request
-String strurl = "/Final3%20-%20local/driver/subDataDrive.php"; //Enlace del envío del Post
+char host[] = ""; //Host a conectar
+String strhost = ""; //Host a enviar http Request
+String strurl = "/Final2.5/driver/subDataDrive.php"; //Enlace del envío del Post
 
 
 //-------Función para Enviar Datos a la Base de Datos SQL--------
@@ -88,8 +88,8 @@ void setup() {
   }
   if ( contconexion < 50 ) {
 
-      IPAddress ip(192,168,1,37); //Ip asignada al esp32
-      IPAddress gateway(192,168,1,1); //Entrada del router
+      IPAddress ip(); //Ip asignada al esp32
+      IPAddress gateway(); //Entrada del router
       IPAddress subnet(255,255,255,0); //Subred
       WiFi.config(WiFi.localIP(), gateway, subnet); 
      

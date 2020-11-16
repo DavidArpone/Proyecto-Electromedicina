@@ -4,7 +4,7 @@ Práctica Formativa Obligatoria
 Laboratorio de Mecatrónica - UNITEC - Facultad de Ingeniería – UNLP 
 2020
 
-Atanasof, Valentín; Arpone, David; Aguirre, Germán. 
+Aguirre, Germán; Arpone, David; Atanasof, Valentín. 
 Departamento de Electrónica, 7mo 4ta.
 Escuela de Educación Secundaria Técninca N°6 "Albert Thomas", La Plata, Argentina.
 

@@ -20,10 +20,6 @@ Desarrollar un sistema biométrico de acceso remoto capaz de almacenar datos en 
 
 Probar la plataforma web con el usuario 99999999 y la contraseña 12345
 
-Versión de la plataforma 2.5
-versión de la base de datos 2
-Versión del codigo esp32 1.5
-
 Para compilar debe modificar el codigo .ino y agregar:
   Nombre de la conexión Wi-Fi
   Contraseña de la conexión Wi-Fi
